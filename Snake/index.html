@@ -9,6 +9,7 @@
 <body>
 
   <ul class="grid group">
+    <!-- <li></li>
     <li></li>
     <li></li>
     <li></li>
@@ -88,11 +89,9 @@
     <li></li>
     <li></li>
     <li></li>
-    <li></li>
-    <li></li>
+    <li></li> -->
 
   </ul>
-
 
 
 
@@ -119,7 +118,14 @@
 
   <script type="application/javascript">
   $(function() {
-    var view = new SnakeUI.View($('.board'));
+
+    for(var y = 0; y < 9; y++) {
+      for(var x = 0; x < 9; x++) {
+        $(".grid").append("\<li data-id=\"[" + y + ", " + x + "]\">\<\/li>");
+      }
+    }
+
+    var view = new SnakeUI.View($('.grid'));
     view.start();
   });
 
