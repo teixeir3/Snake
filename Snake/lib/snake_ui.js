@@ -122,7 +122,7 @@
     //interval with #step.
     this.timerId = setInterval(function() {
       that.step();
-    },1000);
+    },500);
 
 
   };
